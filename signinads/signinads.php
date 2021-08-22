@@ -112,15 +112,15 @@ class LogInAds {
 				 $taxlabels = array(
 		    			'name'			 			=> 		_x( 'Ad Categories', 'taxonomy general name' ),
 		   			 	'singular_name' 			=> 		_x( 'Ad Category', 'taxonomy singular name' ),
-		    			'search_items' 				=>  	__( 'Search Ad Categories' ),
-		    			'all_items' 				=> 		__( 'All Ad Categories' ),
-		    			'parent_item' 				=> 		__( 'Parent Ad Category' ),
-		    			'parent_item_colon' 		=> 		__( 'Parent Ad Category:' ),
-		    			'edit_item' 				=> 		__( 'Edit Ad Category' ), 
-		    			'update_item' 				=> 		__( 'Update Ad Category' ),
+		    			'search_items' 					=>  	__( 'Search Ad Categories' ),
+		    			'all_items' 					=> 		__( 'All Ad Categories' ),
+		    			'parent_item' 					=> 		__( 'Parent Ad Category' ),
+		    			'parent_item_colon' 				=> 		__( 'Parent Ad Category:' ),
+		    			'edit_item' 					=> 		__( 'Edit Ad Category' ), 
+		    			'update_item' 					=> 		__( 'Update Ad Category' ),
 		   				'add_new_item' 				=> 		__( 'Add New Ad Category' ),
-		    			'new_item_name' 			=> 		__( 'New Ad Category Name' ),
-		    			'menu_name' 				=> 		__( 'Ad Categories' ),
+		    			'new_item_name' 				=> 		__( 'New Ad Category Name' ),
+		    			'menu_name' 					=> 		__( 'Ad Categories' ),
 		 			 ); 	
 
 		register_taxonomy ( self::LIA_TAXONOMY, array( self::LIA_POST_TYPE ), array(
@@ -129,46 +129,46 @@ class LogInAds {
 		    			'show_ui' 					=> 		true,
 						'show_in_nav_menus'			=>		false,
 						'show_tagcloud' 			=>		true,
-		    			'query_var' 				=> 		true,
-		  				'rewrite' 					=> 		false,
+		    			'query_var' 					=> 		true,
+		  				'rewrite' 				=> 		false,
 		  ) );	// register taxonomy
 		
 	// Register UKDN custom post type
 	register_post_type ( self::LIA_POST_TYPE , array(
-		'labels'							=> 		array(
-			'name'							=>		_x( 'Login Ads', 'post type general name' , 'LIA_textdomain' ),
-			'singular_name' 				=> 		_x( 'Login Ad', 'post type singular name' , 'LIA_textdomain' ),
-			'add_new' 						=> 		_x( 'Add New Login Ad', 'login Ad' , 'LIA_textdomain' ),
-			'add_new_item' 					=> 		__( 'Add New Login Ad' , 'LIA_textdomain' ),
-			'edit_item' 					=> 		__( 'Edit Login Ad' , 'LIA_textdomain' ),
-			'new_item' 						=> 		__( 'New Login Ad' , 'LIA_textdomain' ),
-			'all_items' 					=> 		__( 'All Login Ads' , 'LIA_textdomain' ),
-			'view_item' 					=> 		__( 'View Login Ad' , 'LIA_textdomain' ),
-			'search_items' 					=> 		__( 'Search Login Ads' , 'LIA_textdomain' ),
-			'not_found' 					=>  	__( 'No Login Ads found' , 'LIA_textdomain' ),
-			'not_found_in_trash' 			=> 		__( 'No Login Ads found in Trash' , 'LIA_textdomain' ), 
-			'parent_item_colon' 			=> 		__( 'Parent Login Ad',  'LIA_textdomain' ),
-			'menu_name' 					=>		__( 'Login Ads', 'LIA_textdomain' ),
+		'labels'								=> 		array(
+			'name'								=>		_x( 'Login Ads', 'post type general name' , 'LIA_textdomain' ),
+			'singular_name' 						=> 		_x( 'Login Ad', 'post type singular name' , 'LIA_textdomain' ),
+			'add_new' 							=> 		_x( 'Add New Login Ad', 'login Ad' , 'LIA_textdomain' ),
+			'add_new_item' 							=> 		__( 'Add New Login Ad' , 'LIA_textdomain' ),
+			'edit_item' 							=> 		__( 'Edit Login Ad' , 'LIA_textdomain' ),
+			'new_item' 							=> 		__( 'New Login Ad' , 'LIA_textdomain' ),
+			'all_items' 							=> 		__( 'All Login Ads' , 'LIA_textdomain' ),
+			'view_item' 							=> 		__( 'View Login Ad' , 'LIA_textdomain' ),
+			'search_items' 							=> 		__( 'Search Login Ads' , 'LIA_textdomain' ),
+			'not_found' 							=>  	__( 'No Login Ads found' , 'LIA_textdomain' ),
+			'not_found_in_trash' 						=> 		__( 'No Login Ads found in Trash' , 'LIA_textdomain' ), 
+			'parent_item_colon' 						=> 		__( 'Parent Login Ad',  'LIA_textdomain' ),
+			'menu_name' 							=>		__( 'Login Ads', 'LIA_textdomain' ),
 		 											),
-		'description' 						=> 		__( 'Login Ads' ),
-		'singular_label' 					=>		__( 'Login Ad' ),
-		'public' 							=> 		true,
-		'taxonomies'						=>   	array(self::LIA_TAXONOMY, self::LIA_PRODUCTS),
-		'exclude_from_search'				=>		true,
-		'show_ui'							=>	 	true, 								// UI in admin panel
-		'show_in_nav_menus'					=>		false,
-		'publicly_queryable'				=>		false,	
-		'capability_type' 					=> 		'post',
-		'hierarchical' 						=> 		false,
-		'has_archive'						=>		false,
-		'rewrite' 							=> 		array(								// Permalinks
-			'slug' 							=> 		self::LIA_POST_TYPE,
-			'with_front'					=>		false,
+		'description' 								=> 		__( 'Login Ads' ),
+		'singular_label' 							=>		__( 'Login Ad' ),
+		'public' 								=> 		true,
+		'taxonomies'								=>   	array(self::LIA_TAXONOMY, self::LIA_PRODUCTS),
+		'exclude_from_search'							=>		true,
+		'show_ui'								=>	 	true, 								// UI in admin panel
+		'show_in_nav_menus'							=>		false,
+		'publicly_queryable'							=>		false,	
+		'capability_type' 							=> 		'post',
+		'hierarchical' 								=> 		false,
+		'has_archive'								=>		false,
+		'rewrite' 								=> 		array(								// Permalinks
+			'slug' 								=> 		self::LIA_POST_TYPE,
+			'with_front'							=>		false,
 														), 					
-		'menu_icon' 						=> 		'dashicons-email-alt', 
-		'menu_position' 					=> 		3,
-		'query_var' 						=> 		self::LIA_POST_TYPE, 						// WP_Query schema
-		'supports' 							=> 		array ( 'title','editor','author' )
+		'menu_icon' 								=> 		'dashicons-email-alt', 
+		'menu_position' 							=> 		3,
+		'query_var' 								=> 		self::LIA_POST_TYPE, 						// WP_Query schema
+		'supports' 								=> 		array ( 'title','editor','author' )
 	) );
 		
 		add_filter( 'post_updated_messages', array( $this, 'LIA_updated_messages' ) );
@@ -186,7 +186,7 @@ class LogInAds {
 			"title" 						=> 		"Title",
 			"author" 						=> 		"Author",
 			"date" 							=> 		"Date",
-			self::LIA_TAXONOMY 				=> 		"Category",
+			self::LIA_TAXONOMY 					=> 		"Category",
 			"start"							=>		"Start Date",
 			"end"							=>		"End Date",
 			"include"						=>		"Include in rotation",
@@ -281,7 +281,7 @@ class LogInAds {
     		2 	=> 		__( 'Custom field updated.' ),
     		3 	=>		__( 'Custom field deleted.' ),
     		4 	=> 		__( 'Login ad updated.' ),						/* translators: %s: date and time of the revision */
-   			5 	=>		isset( $_GET['revision'] ) ? sprintf( __( 'Login ad restored to revision from %s' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+   		5 	=>		isset( $_GET['revision'] ) ? sprintf( __( 'Login ad restored to revision from %s' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
     		6 	=> 		sprintf( __(' Login ad published. <a href="%s">View login ad</a>' ), esc_url( get_permalink( $post->ID ) ) ),
     		7 	=> 		__( 'Login ad saved.' ),
     		8 	=> 		sprintf( __( 'Login ad submitted. <a target="_blank" href="%s">Preview login ad</a>' ), esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) ),
