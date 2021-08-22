@@ -29,8 +29,8 @@ class LogInAds {
 	
 	const LIA_POST_TYPE	= "loginads";
 	const LIA_TAXONOMY 	= "LIA_category";
-	const LIA_PRODUCTS = "gcdntags";
-	const LIA_TEXTDOMAIN = "LIA_textdomain";
+	const LIA_PRODUCTS 	= "gcdntags";
+	const LIA_TEXTDOMAIN 	= "LIA_textdomain";
 	
 	private static $instance;
 	private $settings;
